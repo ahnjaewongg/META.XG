@@ -1,0 +1,91 @@
+.game-filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-primary-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.queue-filters {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: var(--border-radius-sm);
+}
+
+.filter-btn:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-primary);
+}
+
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+    font-weight: bold;
+}
+
+.champion-search {
+    position: relative;
+}
+
+.champion-input {
+    padding: 8px 16px;
+    border: 1px solid var(--color-primary-light);
+    border-radius: var(--border-radius-sm);
+    font-size: 14px;
+    width: 200px;
+    outline: none;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
+    transition: all 0.2s ease;
+}
+
+.champion-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(201, 170, 113, 0.2);
+}
+
+.champion-input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+    .game-filter {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+    
+    .queue-filters {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-xs);
+    }
+    
+    .champion-search {
+        width: 100%;
+    }
+    
+    .champion-input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+} 

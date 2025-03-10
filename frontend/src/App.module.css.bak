@@ -1,0 +1,592 @@
+/* App 컴포넌트 스타일 */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0A1428;
+    color: #ffffff;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer {
+    background-color: #091428;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #17313A;
+}
+
+/* 버튼 및 입력 필드 스타일 */
+.button {
+    background-color: #0AC8B9;
+    color: #0A1428;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0BD8C9;
+}
+
+.input {
+    background-color: #0A1428;
+    border: 1px solid #17313A;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #0AC8B9;
+}
+
+/* 카드 및 컨테이너 스타일 */
+.card {
+    background-color: #091428;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #17313A;
+}
+
+.cardTitle {
+    color: #cdfafa;
+    font-size: 1.2em;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #17313A;
+    padding-bottom: 8px;
+}
+
+/* 로딩 및 에러 상태 스타일 */
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.loadingText {
+    margin-top: 16px;
+    color: #cdfafa;
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: #E84057;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+    
+    .card {
+        padding: 12px;
+    }
+}
+
+.app {
+    width: 100%;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+.content {
+    margin-top: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.summoner-content {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.profile-and-rank {
+    display: flex;
+    gap: 20px;
+}
+
+.rank-section {
+    background: var(--card-bg-dark);
+    border-radius: 6px;
+    padding: 15px;
+    width: 300px;
+    border: 1px solid var(--border-color);
+}
+
+.rank-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--gold-accent);
+    font-weight: bold;
+}
+
+.rank-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tier-emblem img {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 5px rgba(201, 170, 113, 0.3));
+}
+
+.rank-details {
+    flex: 1;
+}
+
+.tier-info {
+    margin-bottom: 8px;
+}
+
+.tier {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.lp {
+    margin-left: 8px;
+    color: var(--text-secondary);
+}
+
+.record {
+    display: flex;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+.win-rate {
+    color: var(--gold-accent);
+}
+
+.main-dashboard {
+    margin-top: 30px;
+    padding: 0 32px;
+    background: var(--bg-color);
+    min-height: calc(100vh - 100px);
+    animation: fadeIn 0.5s ease;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 32px 0;
+}
+
+.patchNotes,
+.notices {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.patchNotes:hover,
+.notices:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.patchNotes h2,
+.notices h2 {
+    color: var(--gold-accent);
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--gold-accent);
+    padding-bottom: 12px;
+    position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.table-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--card-bg-dark);
+    border: 1px solid var(--border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--table-header-bg);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+tr:hover td {
+    background: var(--table-hover-bg);
+    color: var(--text-primary);
+}
+
+.patchNotes table tr td:first-child {
+    color: var(--gold-accent);
+    font-weight: 600;
+}
+
+.notices table tr td:first-child {
+    width: 100px;
+    color: var(--gold-accent);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.notices table tr td:last-child {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* 테이블 뱃지 스타일 */
+.version-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--accent-color);
+    color: var(--text-primary);
+}
+
+.date-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    background: var(--card-bg-dark);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 24px;
+    margin: 20px auto;
+    padding: 0 20px;
+    justify-content: center;
+    background: var(--card-bg);
+    border-radius: 30px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    width: fit-content;
+}
+
+.nav-menu a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--gold-accent);
+}
+
+.nav-menu a.active {
+    color: var(--gold-accent);
+    background: var(--card-bg-dark);
+}
+
+.champion-recommendations {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 200px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.champion-recommendations h3 {
+    color: var(--gold-accent);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.champion-recommendations.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--card-bg-dark);
+    border-top: 5px solid var(--gold-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: var(--text-secondary);
+}
+
+.recommended-champions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.champion-card {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg-dark);
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+}
+
+.champion-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--gold-accent);
+}
+
+.champion-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    margin-right: 10px;
+    border: 2px solid var(--border-color);
+    transition: border-color 0.2s ease;
+}
+
+.champion-card:hover img {
+    border-color: var(--gold-accent);
+}
+
+.champion-stats {
+    font-size: 0.9em;
+}
+
+.champion-name {
+    font-weight: bold;
+    color: var(--gold-accent);
+}
+
+.win-rate, .kda {
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.match-history {
+    /* 기존 스타일 유지 */
+}
+
+.recommendations-section {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+.error-icon {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #e74c3c;
+}
+
+.error-text {
+    font-size: 1.2em;
+    color: #e74c3c;
+    text-align: center;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1200px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-container {
+        padding: 24px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-header {
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        padding: 16px 0;
+        gap: 16px;
+    }
+
+    .main-dashboard {
+        padding: 0 16px;
+    }
+
+    .patchNotes,
+    .notices {
+        padding: 20px;
+    }
+
+    .patchNotes h2,
+    .notices h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    td, th {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .profile-and-rank {
+        flex-direction: column;
+    }
+
+    .rank-section {
+        width: 100%;
+    }
+    
+    .nav-menu {
+        padding: 0 15px;
+        margin: 15px auto;
+    }
+    
+    .nav-menu a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .patchNotes h2,
+    .notices h2 {
+        font-size: 16px;
+    }
+
+    td, th {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .version-badge,
+    .date-badge {
+        padding: 2px 4px;
+        font-size: 10px;
+    }
+    
+    .content {
+        padding: 15px;
+    }
+}
+
+/* 패치노트와 공지사항에 적용될 카드 스타일 재정의 */
+:global(.card) {
+    background-color: transparent !important;
+    --bs-card-bg: transparent !important;
+} 

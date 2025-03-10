@@ -1,0 +1,725 @@
+.summoner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: var(--card-border-radius, 8px);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.summoner-content:hover {
+    border: var(--card-hover-border);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.content-section {
+    margin-bottom: 30px;
+    background-color: var(--color-bg-card, #f8f9fa);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    color: #c8aa6e;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(200, 170, 110, 0.5);
+    position: relative;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 50px;
+    height: 2px;
+    background-color: #c8aa6e;
+}
+
+/* 통계 그리드 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: rgba(21, 21, 21, 0.7);
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: rgba(200, 170, 110, 0.5);
+}
+
+.stat-title {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #c8aa6e;
+}
+
+/* KDA 표시 개선 */
+.kda-detail {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.kills, .assists {
+    color: #1ed7a5; /* 초록색 */
+}
+
+.deaths {
+    color: #e84057; /* 빨간색 */
+}
+
+.kda-ratio {
+    font-weight: 600;
+    color: #c8aa6e;
+    margin-left: 4px;
+}
+
+.positive {
+    color: var(--color-success, #28a745);
+}
+
+.negative {
+    color: var(--color-danger, #dc3545);
+}
+
+/* 챔피언 통계 */
+.champion-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.champion-card {
+    display: flex;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: rgba(21, 21, 21, 0.7);
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.champion-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-color: #c8aa6e; /* 호버 시 금색 테두리 */
+}
+
+.champion-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-right: 12px;
+    border: 1px solid rgba(200, 170, 110, 0.3); /* 연한 금색 테두리 */
+}
+
+.champion-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.champion-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.champion-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #c8aa6e;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.champion-stats-row {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #e0e0e0;
+}
+
+.champion-winrate {
+    font-weight: 600;
+    color: #c8aa6e;
+}
+
+.high {
+    color: #1ed7a5;
+}
+
+.medium {
+    color: #c8aa6e;
+}
+
+.low {
+    color: #e84057;
+}
+
+.kda {
+    color: #e0e0e0;
+    margin-left: 8px;
+}
+
+.no-data {
+    text-align: center;
+    padding: 30px;
+    color: var(--color-text-secondary, #6c757d);
+    font-style: italic;
+}
+
+/* 티어 정보 */
+.tier-info {
+    display: flex;
+    background-color: rgba(21, 21, 21, 0.8);
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    border: 1px solid #333;
+}
+
+.tier-icon {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #c8aa6e;
+}
+
+.tier-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tier-icon:hover img {
+    transform: scale(1.1);
+}
+
+.tier-details {
+    flex: 1;
+}
+
+.tier-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #c8aa6e;
+    margin-bottom: 4px;
+}
+
+.tier-lp {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.tier-record {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.win-rate {
+    display: inline-block;
+    font-weight: 600;
+    color: #c8aa6e;
+    margin-left: 8px;
+}
+
+/* 현재 게임 */
+.current-game {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    border-left: 3px solid var(--color-warning);
+}
+
+.current-game-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.game-type {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-text-highlight);
+}
+
+.game-duration {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.team-header {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-highlight);
+    display: flex;
+    align-items: center;
+}
+
+.team-header::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: var(--spacing-sm);
+}
+
+.blue-team .team-header::before {
+    background-color: #5383e8;
+}
+
+.red-team .team-header::before {
+    background-color: #e84057;
+}
+
+.blue-team, .red-team {
+    margin-bottom: var(--spacing-md);
+}
+
+.team-players {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.player-card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-xs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.player-card:hover {
+    transform: translateY(-2px);
+    border: 1px solid var(--color-border-light);
+}
+
+.player-champion {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: var(--spacing-xs);
+    border: 1px solid var(--color-border-light);
+}
+
+.player-champion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player-name {
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    color: var(--color-text-primary);
+}
+
+.current-player {
+    border: 1px solid var(--color-primary);
+    background-color: rgba(201, 170, 113, 0.1);
+}
+
+.no-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-text-secondary);
+}
+
+.no-game-icon {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.7;
+}
+
+.no-game-message {
+    font-size: 16px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.no-game-sub {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .champion-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tier-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .tier-icon {
+        margin-right: 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .champion-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-card {
+        padding: 10px;
+    }
+    
+    .stat-title {
+        font-size: 12px;
+    }
+    
+    .stat-value {
+        font-size: 16px;
+    }
+    
+    .champion-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .champion-name {
+        font-size: 12px;
+    }
+    
+    .champion-stats-row {
+        font-size: 10px;
+    }
+}
+
+.rank-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: var(--card-bg-dark);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.tier-image {
+    width: 200px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-right: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #c8aa6e;
+}
+
+.tier-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tier-image:hover img {
+    transform: scale(1.1);
+}
+
+.rank-details {
+    flex: 1;
+}
+
+.rank-tier {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--gold-accent);
+    margin-bottom: 5px;
+}
+
+.rank-lp {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.rank-winrate {
+    font-size: 1rem;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: rgba(10, 20, 30, 0.6);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.wins {
+    color: #4caf50;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.losses {
+    color: #f44336;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.win-rate {
+    color: var(--text-secondary);
+}
+
+.no-data {
+    padding: 30px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* 게임 상태 관련 스타일 */
+.not-in-game, .in-game, .loading-game {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.not-in-game {
+    background-color: rgba(30, 30, 30, 0.7);
+    color: #999;
+}
+
+.in-game {
+    background-color: rgba(200, 170, 110, 0.2);
+    color: #c8aa6e;
+}
+
+.loading-game {
+    background-color: rgba(30, 30, 30, 0.7);
+    color: #888;
+}
+
+.status-icon {
+    margin-right: 8px;
+}
+
+.status-text {
+    font-weight: 500;
+}
+
+.game-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.game-type {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.game-time {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* 인게임 세부 정보 스타일 */
+.ingame-details {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.ingame-details h3 {
+    color: var(--gold-accent);
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.teams-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.team-name {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.participant {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(201, 170, 113, 0.1);
+}
+
+.participant:last-child {
+    border-bottom: none;
+}
+
+.champion-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+}
+
+.summoner-name {
+    font-size: 14px;
+    color: var(--text-secondary);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 인게임 탭 컨텐츠 */
+.ingame-tab-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .teams-container {
+        flex-direction: column;
+    }
+    
+    .rank-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tier-image {
+        margin-bottom: 10px;
+    }
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: var(--gold-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rank-info .win-rate {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-left: 10px;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    background-color: rgba(10, 20, 30, 0.6);
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} 

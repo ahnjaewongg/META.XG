@@ -1,0 +1,234 @@
+.ranking-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.ranking-title {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 1rem;
+    color: var(--gold-accent);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(201, 170, 113, 0.3);
+}
+
+.rankings-table {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-speed, 0.2s) ease;
+}
+
+.rankings-table:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--card-bg-dark);
+    color: var(--text-primary);
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+tr:hover {
+    background: var(--table-hover-bg, rgba(201, 170, 113, 0.05));
+}
+
+tr:hover td {
+    color: var(--text-primary);
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination-button {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-button:disabled {
+    background: var(--card-bg-dark);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background: var(--gold-accent);
+    color: var(--card-bg-dark);
+    border-color: var(--gold-accent);
+}
+
+.page-info {
+    padding: 8px 16px;
+    background: var(--card-bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--gold-accent);
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: var(--loss-color, #e84057);
+    font-weight: bold;
+}
+
+.tier-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tier-selector button {
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--card-bg);
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    color: var(--text-secondary);
+}
+
+.tier-selector button:hover {
+    background: var(--card-bg-dark);
+    border-color: var(--gold-accent);
+    color: var(--gold-accent);
+}
+
+.tier-selector button.active {
+    background: var(--gold-accent);
+    color: var(--card-bg-dark);
+    border-color: var(--gold-accent);
+}
+
+.rankings-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.rankings-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.rankings-table tr:hover {
+    background: var(--table-hover-bg, rgba(201, 170, 113, 0.05));
+}
+
+.rankings-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 각 열의 너비 조정 */
+.rankings-table th:nth-child(1),
+.rankings-table td:nth-child(1) {
+    width: 80px;
+    text-align: center;
+}
+
+.rankings-table th:nth-child(2),
+.rankings-table td:nth-child(2) {
+    width: 200px;
+}
+
+.rankings-table th:nth-child(3),
+.rankings-table td:nth-child(3) {
+    width: 100px;
+    text-align: center;
+}
+
+.rankings-table th:nth-child(4),
+.rankings-table td:nth-child(4) {
+    width: 150px;
+    text-align: center;
+}
+
+.rankings-table th:nth-child(5),
+.rankings-table td:nth-child(5) {
+    width: 100px;
+    text-align: center;
+}
+
+/* 순위에 따른 강조 표시 */
+.rankings-table tr:nth-child(1) td {
+    color: var(--gold-accent);
+    font-weight: 600;
+}
+
+.rankings-table tr:nth-child(2) td {
+    color: #e5ddcb; /* 약간 옅은 은색 */
+    font-weight: 600;
+}
+
+.rankings-table tr:nth-child(3) td {
+    color: #cd7f32; /* 동색 */
+    font-weight: 600;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .ranking-page {
+        padding: 10px;
+    }
+
+    .rankings-table th,
+    .rankings-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .rankings-table th:nth-child(4),
+    .rankings-table td:nth-child(4) {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+} 

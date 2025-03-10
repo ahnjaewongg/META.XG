@@ -1,0 +1,33 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #1a78f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.summoner-profile {
+    text-align: center;
+    padding: 20px;
+}
+
+.summoner-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

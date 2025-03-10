@@ -1,0 +1,12 @@
+com\lolservice\LolServiceApplication.class
+com\lolservice\service\ChampionService.class
+com\lolservice\controller\HomeController.class
+com\lolservice\dto\MatchDTO.class
+com\lolservice\dto\MatchDTO$ParticipantDTO.class
+com\lolservice\dto\MatchDTO$InfoDTO.class
+com\lolservice\dto\SummonerDTO.class
+com\lolservice\controller\MatchController.class
+com\lolservice\dto\LeagueEntryDTO.class
+com\lolservice\dto\MatchDTO$MetadataDTO.class
+com\lolservice\service\MatchService$1.class
+com\lolservice\service\MatchService.class

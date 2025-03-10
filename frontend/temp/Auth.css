@@ -1,0 +1,40 @@
+﻿.auth-paper {
+  margin-top: 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #091428 !important;
+  border: 1px solid #17313A;
+}
+
+.auth-paper h1 {
+  margin-bottom: 1rem;
+  color: #cdfafa;
+}
+
+.auth-link {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #0ac8b9;
+}
+
+.social-button {
+  margin: 0.5rem 0;
+  text-transform: none;
+}
+
+.social-button.google {
+  background-color: #ffffff;
+  color: #4285F4;
+}
+
+.social-button.naver {
+  background-color: #03C75A;
+  color: #ffffff;
+}
+
+.social-button.kakao {
+  background-color: #FEE500;
+  color: #000000;
+}

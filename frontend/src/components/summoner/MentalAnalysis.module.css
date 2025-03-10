@@ -1,0 +1,195 @@
+/* 멘탈 분석 컴포넌트 스타일 */
+.container {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  max-width: 100%;
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.title {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--accent-color);
+}
+
+.alertMargin {
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+}
+
+.paper {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-md) !important;
+  box-shadow: var(--card-shadow) !important;
+  border: var(--card-border);
+}
+
+.sectionTitle {
+  color: var(--gold-accent) !important;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.tiltProgressContainer {
+  display: flex;
+  align-items: center;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.progressBar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: var(--card-bg-dark);
+  border-radius: var(--border-radius-sm);
+  margin-right: var(--spacing-md);
+  overflow: hidden;
+}
+
+.progressBarLow {
+  background-color: #4caf50;
+  transition: width 0.5s ease;
+}
+
+.progressBarMedium {
+  background-color: #ff9800;
+  transition: width 0.5s ease;
+}
+
+.progressBarHigh {
+  background-color: #f44336;
+  transition: width 0.5s ease;
+}
+
+.percentageBox {
+  width: 40px;
+  text-align: right;
+}
+
+.percentageText {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.messageText {
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  padding: var(--spacing-sm);
+  border-left: 3px solid rgba(201, 170, 113, 0.3);
+  background-color: rgba(201, 170, 113, 0.03);
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.chipContainer {
+  margin-top: var(--spacing-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.chip {
+  margin-right: 0;
+  margin-bottom: 0;
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.chipSuccess {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  color: #4caf50 !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+}
+
+.chipError {
+  background-color: rgba(244, 67, 54, 0.1) !important;
+  color: #f44336 !important;
+  border: 1px solid rgba(244, 67, 54, 0.3) !important;
+}
+
+.chipDefault {
+  background-color: rgba(29, 169, 204, 0.1) !important;
+  color: var(--accent-color) !important;
+  border: 1px solid rgba(29, 169, 204, 0.3) !important;
+}
+
+.messageContainer {
+  margin-top: var(--spacing-sm);
+  color: var(--text-secondary);
+  padding: var(--spacing-sm);
+  font-style: italic;
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(29, 169, 204, 0.05);
+}
+
+.list {
+  padding: 0;
+}
+
+.listItem {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(201, 170, 113, 0.1);
+  padding-bottom: var(--spacing-md);
+  transition: background-color 0.3s ease;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.listItem:hover {
+  background-color: rgba(29, 169, 204, 0.03);
+}
+
+.recommendationItem {
+  background-color: rgba(201, 170, 113, 0.03);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border-left: 3px solid rgba(201, 170, 113, 0.2);
+}
+
+.recommendationItem:hover {
+  background-color: rgba(201, 170, 113, 0.05);
+  border-left: 3px solid rgba(201, 170, 113, 0.4);
+}
+
+.listItemIcon {
+  color: var(--accent-color);
+  min-width: 40px !important;
+}
+
+.secondaryText {
+  color: var(--text-secondary) !important;
+  font-style: italic;
+  margin-top: var(--spacing-xs);
+  line-height: 1.6;
+} 

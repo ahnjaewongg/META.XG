@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LoL Match History</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>META.XG</h1>
+            <div class="search-box">
+                <input type="text" id="summonerName" placeholder="소환사명#태그 (예: Hide on bush#KR1)">
+                <button onclick="searchSummoner()">검색</button>
+            </div>
+        </header>
+        
+        <main>
+            <div id="loading" class="loading" style="display: none;">검색중...</div>
+            <div id="error" class="error" style="display: none;"></div>
+            <div id="matchHistory" class="match-history"></div>
+        </main>
+    </div>
+
+    <script>
+        // 챔피언 데이터를 저장할 전역 변수
+        let championData = {};
+
+        // 페이지 로드 시 챔피언 데이터 가져오기
+        window.onload = async function() {
+            try {
+                const response = await fetch('http://ddragon.leagueoflegends.com/cdn/13.24.1/data/ko_KR/champion.json');
+                const data = await response.json();
+                championData = data.data;
+            } catch (err) {
+                console.error('챔피언 데이터를 불러오는데 실패했습니다:', err);
+            }
+        }
+
+        // 챔피언 ID를 이름으로 변환하는 함수
+        function getChampionName(championId) {
+            // championData 객체의 모든 챔피언을 순회
+            for (let key in championData) {
+                if (championData[key].key === championId.toString()) {
+                    return championData[key].id;
+                }
+            }
+            return 'Unknown'; // 챔피언을 찾지 못한 경우
+        }
+
+        async function searchSummoner() {
+            const summonerName = document.getElementById('summonerName').value;
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const matchHistory = document.getElementById('matchHistory');
+
+            loading.style.display = 'block';
+            error.style.display = 'none';
+            matchHistory.innerHTML = '';
+
+            try {
+                const response = await fetch(`/api/matches/by-summoner/${encodeURIComponent(summonerName)}`);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const matches = await response.json();
+                displayMatches(matches);
+            } catch (err) {
+                error.textContent = '전적 검색 중 오류가 발생했습니다.';
+                error.style.display = 'block';
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+
+        function displayMatches(matches) {
+            const matchHistory = document.getElementById('matchHistory');
+            matchHistory.innerHTML = matches.map(match => `
+                <div class="match-card ${match.info.participants[0].win ? 'victory' : 'defeat'}">
+                    <div class="match-info">
+                        <div class="champion">
+                            <img src="http://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/${match.info.participants[0].championName}.png" 
+                                 alt="${match.info.participants[0].championName}" 
+                                 class="champion-icon">
+                            <div class="champion-name">${match.info.participants[0].championName}</div>
+                        </div>
+                        <div class="stats">
+                            <div class="kda">${match.info.participants[0].kills}/${match.info.participants[0].deaths}/${match.info.participants[0].assists}</div>
+                            <div class="game-result">${match.info.participants[0].win ? '승리' : '패배'}</div>
+                        </div>
+                        <div class="game-duration">
+                            ${Math.floor(match.info.gameDuration / 60)}분 ${match.info.gameDuration % 60}초
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html> 

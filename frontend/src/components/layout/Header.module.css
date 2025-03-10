@@ -1,0 +1,286 @@
+.header {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    padding: 0.8rem 1.5rem;
+    box-shadow: var(--card-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logoContainer {
+    flex: 0 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.highlight {
+    color: var(--gold-accent);
+    margin-left: 2px;
+}
+
+.navigation {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li {
+    margin-right: 1.5rem;
+}
+
+.navLinks a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.navLinks a:hover {
+    color: var(--gold-accent);
+}
+
+.searchBar {
+    position: relative;
+    display: flex;
+    flex: 0 0 300px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    padding-right: 2.5rem;
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--gold-accent);
+    box-shadow: 0 0 0 2px rgba(201, 170, 113, 0.2);
+}
+
+.searchButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: none;
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.7), rgba(166, 124, 0, 0.7));
+    border: none;
+    border-radius: 0 4px 4px 0;
+    width: 2.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5) inset;
+    transition: all 0.2s ease;
+}
+
+.searchButton:hover {
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.9), rgba(166, 124, 0, 0.9));
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.8) inset;
+    transform: none;
+}
+
+.searchIcon {
+    font-size: 0.9rem;
+    color: #111;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.mobileMenuToggle {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background-color: var(--text-primary);
+    transition: transform 0.3s;
+}
+
+.hamburger {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    left: 0;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 999;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.mobileMenu.open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mobileLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.mobileLinks li {
+    margin-bottom: 0.8rem;
+}
+
+.mobileLinks a {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.mobileSearchBar {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.mobileSearchBar input {
+    flex: 1;
+    padding: 0.7rem;
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    color: var(--text-primary);
+}
+
+.mobileSearchBar button {
+    padding: 0.7rem 1rem;
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.7), rgba(166, 124, 0, 0.7));
+    color: #111;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5) inset;
+    transition: all 0.2s ease;
+    width: 2.5rem;
+    height: 100%;
+}
+
+.mobileSearchBar button:hover {
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.9), rgba(166, 124, 0, 0.9));
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.8) inset;
+}
+
+@media (max-width: 992px) {
+    .navigation {
+        display: none;
+    }
+    
+    .searchBar {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    
+    .mobileMenuToggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchBar {
+        display: none;
+    }
+    
+    .mobileMenu {
+        display: block;
+    }
+}
+
+.authContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.authButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.loginButton {
+    color: #fff !important;
+}
+
+.registerButton {
+    background-color: #4a90e2 !important;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .authContainer {
+        display: none;
+    }
+} 
