@@ -13,7 +13,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 
 ## 📚 기술 스택
 
-<div align="center">
+<div align="left">
   
 ### 🔧 백엔드
 ![Java](https://img.shields.io/badge/Java_17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -44,6 +44,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
         <li><b>챔피언 분석</b>: 챔피언 통계, 포지션별 추천</li>
       </ul>
     </td>
+    
     <td>
       <h3>👥 커뮤니티 & 계정</h3>
       <ul>
@@ -56,10 +57,10 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 
 ### 💡 차별화된 특징
 
-<div align="center">
+<div align="left">
   <table>
     <tr>
-      <td align="center"><h3>🧠</h3></td>
+      <td align="left"><h3>🧠</h3></td>
       <td>
         <h3>맨탈 분석 및 조언</h3>
         <ul>
@@ -70,7 +71,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
       </td>
     </tr>
     <tr>
-      <td align="center"><h3>🎯</h3></td>
+      <td align="left"><h3>🎯</h3></td>
       <td>
         <h3>AI 기반 챔피언 추천</h3>
         <ul>
@@ -81,7 +82,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
       </td>
     </tr>
     <tr>
-      <td align="center"><h3>⚡</h3></td>
+      <td align="left"><h3>⚡</h3></td>
       <td>
         <h3>고성능 캐싱 시스템</h3>
         <ul>
@@ -174,7 +175,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 - 429 에러(Rate Limit 초과) 방지 및 응답 시간 90% 개선
 - 계층적 데이터 접근: Redis → 데이터베이스 → Riot API
 
-<div align="center">
+<div align="left">
   
 ```mermaid
 graph LR
@@ -193,7 +194,7 @@ graph LR
 ---
 
 ## 📁 프로젝트 구조
-
+```
 lol-service/
 ├── src/ # 백엔드 소스 코드
 │ ├── main/java/com/lolservice/
@@ -208,11 +209,11 @@ lol-service/
 │ │ ├── services/ # API 서비스
 │ │ └── App.tsx # 메인 앱 컴포넌트
 └── pom.xml # Maven 설정
-
+```
 
 ---
 
-<div align="center">
+<div align="left">
   
 © 2023 LoL 전적 검색 서비스 | [GitHub](https://github.com/ahnjaewongg/META.XG)
 
