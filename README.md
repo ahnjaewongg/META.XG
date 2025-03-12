@@ -203,7 +203,7 @@ lol-service/
 
 <div align="center">
   
-© 2023 LoL 전적 검색 서비스 | [GitHub](https://github.com/yourusername/lol-service)
+© 2023 LoL 전적 검색 서비스 | [GitHub](https://github.com/ahnjaewongg/META.XG)
 
 <sub>이 프로젝트는 Riot Games의 공식 제품이 아니며, Riot Games 또는 LoL e스포츠와 공식적으로 연관되어 있지 않습니다.</sub>
 
