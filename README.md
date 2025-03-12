@@ -1,20 +1,14 @@
 # 🎮 LoL 전적 검색 서비스
 
-<div align="center">
-  
 **Riot API 기반 LoL 전적 검색 및 커뮤니티 웹 애플리케이션**  
   
 소환사 정보 조회, 매치 히스토리 분석, 챔피언 통계 등 다양한 기능을 제공하며,  
 Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤형 챔피언 추천 기능을 지원합니다.
 
-</div>
-
 ---
 
 ## 📚 기술 스택
 
-<div align="center">
-  
 ### 🔧 백엔드
 ![Java](https://img.shields.io/badge/Java_17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot_3-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
@@ -27,8 +21,6 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Material-UI](https://img.shields.io/badge/Material_UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
-
-</div>
 
 ---
 
@@ -56,43 +48,41 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 
 ### 💡 차별화된 특징
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center"><h3>🧠</h3></td>
-      <td>
-        <h3>맨탈 분석 및 조언</h3>
-        <ul>
-          <li>게임 패턴 기반 틸트 확률 정밀 분석</li>
-          <li>연패, KDA, 사망 패턴 등 다각도 데이터 활용</li>
-          <li>맞춤형 멘탈 관리 조언 제공</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td align="center"><h3>🎯</h3></td>
-      <td>
-        <h3>AI 기반 챔피언 추천</h3>
-        <ul>
-          <li>소환사 플레이 스타일 분석 알고리즘</li>
-          <li>승률 향상을 위한 최적 챔피언 추천</li>
-          <li>포지션별 상성 고려한 맞춤형 제안</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td align="center"><h3>⚡</h3></td>
-      <td>
-        <h3>고성능 캐싱 시스템</h3>
-        <ul>
-          <li>Redis 기반 다중 계층 캐싱으로 응답 시간 90% 개선</li>
-          <li>Riot API 호출 최소화로 안정적인 서비스 제공</li>
-          <li>사용자 경험 극대화를 위한 성능 최적화</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-</div>
+<table>
+  <tr>
+    <td align="center"><h3>🧠</h3></td>
+    <td>
+      <h3>맨탈 분석 및 조언</h3>
+      <ul>
+        <li>게임 패턴 기반 틸트 확률 정밀 분석</li>
+        <li>연패, KDA, 사망 패턴 등 다각도 데이터 활용</li>
+        <li>맞춤형 멘탈 관리 조언 제공</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><h3>🎯</h3></td>
+    <td>
+      <h3>AI 기반 챔피언 추천</h3>
+      <ul>
+        <li>소환사 플레이 스타일 분석 알고리즘</li>
+        <li>승률 향상을 위한 최적 챔피언 추천</li>
+        <li>포지션별 상성 고려한 맞춤형 제안</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><h3>⚡</h3></td>
+    <td>
+      <h3>고성능 캐싱 시스템</h3>
+      <ul>
+        <li>Redis 기반 다중 계층 캐싱으로 응답 시간 90% 개선</li>
+        <li>Riot API 호출 최소화로 안정적인 서비스 제공</li>
+        <li>사용자 경험 극대화를 위한 성능 최적화</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -174,8 +164,8 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 - 429 에러(Rate Limit 초과) 방지 및 응답 시간 90% 개선
 - 계층적 데이터 접근: Redis → 데이터베이스 → Riot API
 
-<div align="center">
-  
+### 캐싱 아키텍처 다이어그램
+
 ```mermaid
 graph LR
     A[클라이언트] -->|요청| B[서버]
@@ -187,8 +177,6 @@ graph LR
     C -->|응답| B
     B -->|응답| A
 ```
-
-</div>
 
 ---
 
