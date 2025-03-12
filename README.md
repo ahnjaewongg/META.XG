@@ -112,11 +112,3 @@ lol-service/
 │   │   └── App.tsx       # 메인 앱 컴포넌트
 └── pom.xml               # Maven 설정
 ```
-
-## 라이센스
-
-이 프로젝트는 MIT 라이센스 하에 배포됩니다.
-
-## 면책 조항
-
-이 프로젝트는 Riot Games의 공식 제품이 아니며, Riot Games 또는 LoL e스포츠와 공식적으로 연관되어 있지 않습니다. 
