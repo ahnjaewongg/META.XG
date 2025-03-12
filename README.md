@@ -13,7 +13,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 
 ## 📚 기술 스택
 
-<div align="left">
+<div align="center">
   
 ### 🔧 백엔드
 ![Java](https://img.shields.io/badge/Java_17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -44,7 +44,6 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
         <li><b>챔피언 분석</b>: 챔피언 통계, 포지션별 추천</li>
       </ul>
     </td>
-    
     <td>
       <h3>👥 커뮤니티 & 계정</h3>
       <ul>
@@ -57,10 +56,10 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 
 ### 💡 차별화된 특징
 
-<div align="left">
+<div align="center">
   <table>
     <tr>
-      <td align="left"><h3>🧠</h3></td>
+      <td align="center"><h3>🧠</h3></td>
       <td>
         <h3>맨탈 분석 및 조언</h3>
         <ul>
@@ -71,7 +70,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
       </td>
     </tr>
     <tr>
-      <td align="left"><h3>🎯</h3></td>
+      <td align="center"><h3>🎯</h3></td>
       <td>
         <h3>AI 기반 챔피언 추천</h3>
         <ul>
@@ -82,7 +81,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
       </td>
     </tr>
     <tr>
-      <td align="left"><h3>⚡</h3></td>
+      <td align="center"><h3>⚡</h3></td>
       <td>
         <h3>고성능 캐싱 시스템</h3>
         <ul>
@@ -213,9 +212,9 @@ lol-service/
 
 ---
 
-<div align="left">
+<div align="center">
   
-© 2023 LoL 전적 검색 서비스 | [GitHub](https://github.com/ahnjaewongg/META.XG)
+© 2023 LoL 전적 검색 서비스 | [GitHub](https://github.com/yourusername/lol-service)
 
 <sub>이 프로젝트는 Riot Games의 공식 제품이 아니며, Riot Games 또는 LoL e스포츠와 공식적으로 연관되어 있지 않습니다.</sub>
 
