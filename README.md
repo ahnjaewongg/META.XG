@@ -134,12 +134,18 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 - 계층적 데이터 접근: Redis → 데이터베이스 → Riot API
 
 ### 캐싱 아키텍처 다이어그램
-클라이언트 → 서버 → Redis 캐시 → 데이터베이스 → Riot API
-↑ ↑ ↑
-└─────────┴────────────┘
-데이터 응답
 
----
+```mermaid
+flowchart LR
+    A[클라이언트] -->|요청| B[서버]
+    B -->|1차 확인| C[Redis 캐시]
+    C -->|캐시 미스| D[데이터베이스]
+    D -->|DB 미스| E[Riot API]
+    E -->|응답| D
+    D -->|저장| C
+    C -->|응답| B
+    B -->|응답| A
+```
 
 ## 📁 프로젝트 구조
 ```
@@ -161,6 +167,6 @@ lol-service/
 
 ---
 
-© 2023 LoL 전적 검색 서비스 | [GitHub](https://github.com/yourusername/lol-service)
+© 2023 LoL 전적 검색 서비스 | [GitHub](https://github.com/ahnjaewongg/META.XG)
 
 <sub>이 프로젝트는 Riot Games의 공식 제품이 아니며, Riot Games 또는 LoL e스포츠와 공식적으로 연관되어 있지 않습니다.</sub>
