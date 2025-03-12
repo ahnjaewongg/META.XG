@@ -175,7 +175,7 @@ Redis 캐싱을 활용해 Riot API 호출을 최적화하고, 소환사 맞춤�
 - 429 에러(Rate Limit 초과) 방지 및 응답 시간 90% 개선
 - 계층적 데이터 접근: Redis → 데이터베이스 → Riot API
 
-<div align="left">
+<div align="center">
   
 ```mermaid
 graph LR
